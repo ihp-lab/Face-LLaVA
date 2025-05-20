@@ -1,7 +1,7 @@
 # Face-LLaVA: Facial Expression and Attribute Understanding through Instruction Tuning
 
 [![arXiv](https://img.shields.io/badge/arXiv-2305.00000v1-b31b1b.svg)](https://arxiv.org/abs/2504.07198)
-[![Model Weights](https://img.shields.io/badge/Download-Model%20Weights-green)]()
+[![Model Weights](https://img.shields.io/badge/Download%20Weights-USC%20GDrive-green)](https://drive.google.com/file/d/1TAZE70WlqY1rQJIzdJ9x7P7IopyYSlfk/view?usp=sharing)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 
 This is the official codebase of the paper - Face-LLaVA: Facial Expression and Attribute Understanding through Instruction Tuning. 
@@ -71,7 +71,7 @@ The human face plays a central role in social communication, necessitating the u
 
 ## 🎯 Inference
 
-1. Download the model weights from [here]() and unzip them inside a `checkpoints/` folder so that the structure becomes - `./checkpoints/facellava-7b-wolm`.
+1. Download the model weights from [here (Use USC Email)](https://drive.google.com/file/d/1TAZE70WlqY1rQJIzdJ9x7P7IopyYSlfk/view?usp=sharing) and unzip them inside a `checkpoints/` folder so that the structure becomes - `./checkpoints/facellava-7b-wolm`.
 
 2. ***Make sure that the input video or image is already face-cropped as the current version does not support automatic cropping.***
 
