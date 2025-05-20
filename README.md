@@ -78,7 +78,8 @@ The human face plays a central role in social communication, necessitating the u
 3. Run the following command for inference.
 
     ```bash
-    CUDA_VISIBLE_DEVICES=0 python inference.py --model_path="./checkpoints/facellava-7b-wolm" --file_path="your_file_path_to_png_or_mp4" --prompt="What are the facial attributes in the given image."
+    CUDA_VISIBLE_DEVICES=0 python inference.py --model_path="./checkpoints/facellava-7b-wolm" \
+    --file_path="./assets/demo_inputs/face_attr_example_1.png" --prompt="What are the facial attributes in the given image?"
     ```
 
 4. Currently the following face perception tasks are supported along with the best modality suited for that task - Emotion(Video), Age(Image), Facial Attributes(Image), Facial Action Units(Image)
