@@ -169,9 +169,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
-checkpoints/
-checkpoints_final/
-checkpoints_finetune/
+checkpoints/*
 eval_log/
 res_*/
 cache_dir/*

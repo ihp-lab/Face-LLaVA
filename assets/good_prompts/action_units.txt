@@ -1,0 +1,10 @@
+Identify the active facial action units in the provided image.
+Specify which facial action units are present in the image.
+List the facial action units visible in the supplied picture.
+Indicate the facial action units shown in the given photograph.
+Detail the facial muscle movements depicted in the image.
+Which facial action units appear in this image?
+What facial action units are engaged in the image?
+What facial action units are expressed in the pictured face?
+Name the activated facial action units from the image.
+Point out the activated facial action units in the given illustration.
