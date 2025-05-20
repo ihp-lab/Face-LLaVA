@@ -197,9 +197,6 @@ class LlavaMetaForCausalLM(ABC):
                 landmark_features = landmark_features.unsqueeze(-2)
             if global_landmark_features.ndim == 2:
                 global_landmark_features = global_landmark_features.unsqueeze(-2)
-            print("image_features", image_features.shape)
-            print("image global_landmark_features", global_landmark_features.shape)
-            print("image landmark_features", landmark_features.shape)
 
             # append global and local features for landmarks
             # landmark_features = torch.cat([landmark_features, global_landmark_features], dim=2)
@@ -208,7 +205,6 @@ class LlavaMetaForCausalLM(ABC):
             image_features =  self.get_model().landmarks_cross_attn(image_features, landmark_features, landmarks)
             if use_landmark_tokens:
                 image_features = torch.cat([image_features, global_landmark_features], dim=2)
-                print("After concat - image_features =>", image_features.shape)
         else:
             image_features = self.get_model().mm_projector(image_features)
         return image_features
@@ -242,9 +238,6 @@ class LlavaMetaForCausalLM(ABC):
                 landmark_features = landmark_features.unsqueeze(-2)
             if global_landmark_features.ndim == 3:
                 global_landmark_features = global_landmark_features.unsqueeze(-2)
-            print("video_features", video_features.shape)
-            print("video global_landmark_features", global_landmark_features.shape)
-            print("video landmark_features", landmark_features.shape)
 
             # append global and local features for landmarks
             # landmark_features = torch.cat([landmark_features, global_landmark_features], dim=2)
@@ -254,7 +247,6 @@ class LlavaMetaForCausalLM(ABC):
             video_features =  self.get_model().landmarks_cross_attn(video_features, landmark_features, landmarks)
             if use_landmark_tokens:
                 video_features = torch.cat([video_features, global_landmark_features], dim=2)
-                print("After concat - video_features =>", video_features.shape)
         else:
             video_features = self.get_model().mm_projector(video_features)
         return video_features
@@ -322,8 +314,6 @@ class LlavaMetaForCausalLM(ABC):
         if len(vid_mask_idx)>0:
             assert len(video_idx) == len(video_idx)
         
-        if landmarks is None:
-            print("LANDMARKS IS NONE HERE=================>")
 
         tmp_image_features = [None] * (len(image_idx) + len(video_idx))
         if getattr(images_minibatch, 'ndim', 0) == 4:  # batch consists of images, [mini_b, c, h, w]

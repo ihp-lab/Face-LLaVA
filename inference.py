@@ -1,3 +1,5 @@
+import argparse
+import logging
 import torch
 from facellava.constants import IMAGE_TOKEN_INDEX, DEFAULT_IMAGE_TOKEN
 from facellava.conversation import conv_templates, SeparatorStyle
@@ -5,13 +7,62 @@ from facellava.model.builder import load_pretrained_model
 from facellava.utils import disable_torch_init
 from facellava.mm_utils import tokenizer_image_token, get_model_name_from_path, KeywordsStoppingCriteria
 
-def main_video():
+
+logging.basicConfig(
+    level=logging.INFO,  # Set to DEBUG for more verbose output
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+
+
+# Following is a list of prompts that works well for different tasks.
+# =================== AGE ESTIMATION - Use with Images ==========================
+# Guess the age of the individual shown in the picture; justify your answer.
+# Determine the approximate age of the person depicted, providing your reasoning.
+# What age would you assign to the person in this visual, and why?
+# Infer the age of the person in the photograph, explaining your rationale.
+# Based on the image, what is your best estimate of the person's age, and what leads you to that conclusion?
+# Provide an age estimation for the person pictured, and explain your estimation.
+# =================== EMOTION RECOGNITION - Use with Videos ==========================
+# What feeling does the video evoke?
+# Identify the emotion conveyed in the video.
+# What emotion is shown in the video?
+# Explain the emotional content of the video.
+# Analyze the emotions depicted in the video.
+# What's the emotional tone of the video?
+# =================== FACIAL ATTRIBUTES - Use with Images ===================================
+# Analyze the facial characteristics shown in the picture.
+# Identify the visible features of the face in the image.
+# Describe the person's face as seen in the photograph.
+# Give a description of the facial features present.
+# Detail the appearance of the face depicted.
+# Characterize the facial structure in the provided image.
+# Specify the visible facial components.
+# =================== FACIAL ACTION UNITS - Use with Images ===================================
+# Identify the active facial action units in the provided image.
+# Specify which facial action units are present in the image.
+# List the facial action units visible in the supplied picture.
+# Indicate the facial action units shown in the given photograph.
+# Detail the facial muscle movements depicted in the image.
+# Which facial action units appear in this image?
+
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Run model with input file and prompt")
+
+    parser.add_argument('--model_path', type=str, required=True, help='Path to the model')
+    parser.add_argument('--file_path', type=str, required=True, help='Path to the input file')
+    parser.add_argument('--prompt', type=str, required=True, help='Prompt to pass to the model')
+
+    return parser.parse_args()
+
+def main_video(args):
+    ## use this for emotion recognition task
+
     disable_torch_init()
-    video = '/wekafs/ict/achaubey/emotion_reasoning/data/ferv39k/ferv39k_processed_new/face_cropped/Conflict/Happy/0001.mp4'
-    inp = 'What facial action units are engaged in the image?'
-    # model_path = 'LanguageBind/Video-LLaVA-7B'
-    # model_path = "./checkpoints/facellava-7b-lora"
-    model_path = "./checkpoints/facellava-7b-attn"
+    video = args.file_path
+    inp = args.prompt  ## Input prompt for the model.
+    model_path = args.model_path
     # model_base = 'lmsys/vicuna-7b-v1.5'
     cache_dir = 'cache_dir'
     device = 'cuda'
@@ -52,16 +103,15 @@ def main_video():
     outputs = tokenizer.decode(output_ids[0, input_ids.shape[1]:]).strip()
     print(outputs)
 
-def main_image():
+def main_image(args):
+    # use this for age, facial attributes, and action units tasks
+
     disable_torch_init()
-    # image = '/wekafs/ict/achaubey/emotion_reasoning/data/dfew/dfew_processed_new/frames_8/5660/5660_6.png'
-    image = "/wekafs/ict/achaubey/emotion_reasoning/data/dfew/dfew_processed_new/frames_8/79/79_1.png"
-    inp = 'What is the age of the person in the image?'
+    image = args.file_path
+
+    inp = args.prompt  ## Input prompt for the model.
     use_landmarks=False
-    # model_path = 'LanguageBind/Video-LLaVA-7B'
-    # model_path = "./checkpoints/facellava-7b-lora"
-    model_path = "/wekafs/ict/achaubey/emotion_reasoning/code/Video-LLaVA/checkpoints_final/videollava-7b-morphii_lr2e-5_8ep"
-    # model_base = 'lmsys/vicuna-7b-v1.5'
+    model_path = args.model_path
     cache_dir = 'cache_dir'
     device = 'cuda'
     load_4bit, load_8bit = True, False
@@ -74,19 +124,8 @@ def main_image():
 
     cur_images = [image]
 
-    if not use_landmarks:
-        image_tensor = [image.to(model.device, dtype=torch.float16) for image in image_processor(cur_images, return_tensors='pt')['pixel_values']]
-        landmarks = None
-    else:
-        try:
-            cur_proc_image = image_processor(cur_images, landmarks_2d = cur_landmarks, return_tensors='pt')
-            image_tensor = [image.to(model.device, dtype=torch.float16) for image in cur_proc_image['pixel_values']]
-            landmarks = [lm.to(model.device, dtype=torch.float16) for lm in cur_proc_image['landmarks']]
-        except:
-            with open("disfa_errors.txt", "a") as f:
-                f.write(f"{cur_images} \n")
-        print("image_tensor", len(image_tensor), image_tensor[0].shape)
-        print("landmarks", len(landmarks), landmarks[0].shape)
+    image_tensor = [image.to(model.device, dtype=torch.float16) for image in image_processor(cur_images, return_tensors='pt')['pixel_values']]
+    landmarks = None
 
     print(f"{roles[1]}: {inp}")
     inp = DEFAULT_IMAGE_TOKEN + '\n' + inp
@@ -113,4 +152,21 @@ def main_image():
     print(outputs)
 
 if __name__ == '__main__':
-    main_image()
+    args = parse_args()
+    print("Prompt: ", args.prompt)
+    print("Model Path: ", args.model_path)
+    print("File Path: ", args.file_path)
+    if args.file_path.endswith('.mp4') or args.file_path.endswith('.avi'):
+        logging.info("You have provided a video file.")
+        logging.info("Running video inference...")
+        logging.warning("Video inference works well with emotion recognition tasks.")
+        logging.warning("For other tasks, please use image inference.")
+        main_video(args)
+    elif args.file_path.endswith('.jpg') or args.file_path.endswith('.png'):
+        logging.info("You have provided an image file.")
+        logging.info("Running image inference...")
+        logging.warning("Image inference works well with age estimation, facial attributes, and action units tasks.")
+        logging.warning("For emotion recognition tasks, please use video inference.")
+        main_image(args)
+    else:
+        print("Unsupported file format. Please provide a video or image file.")

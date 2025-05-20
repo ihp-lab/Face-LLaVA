@@ -507,7 +507,7 @@ def build_vision_projector(config, delay_load=False, **kwargs):
 def build_landmark_projector(config, delay_load=False, **kwargs):
     projector_type = getattr(config, 'landmarks_projector_type', 'linear')
 
-    print("LANDMARKS_PROJECTOR_TYPE ===>", projector_type)
+    # print("LANDMARKS_PROJECTOR_TYPE ===>", projector_type)
 
     if projector_type == 'linear':
         return nn.Linear(config.landmarks_hidden_size, config.hidden_size)
@@ -532,7 +532,7 @@ def build_landmark_projector(config, delay_load=False, **kwargs):
 def build_global_landmark_projector(config, delay_load=False, **kwargs):
     projector_type = getattr(config, 'global_landmarks_projector_type', 'linear')
 
-    print("GLOBAL_LANDMARKS_PROJECTOR_TYPE ===>", projector_type)
+    # print("GLOBAL_LANDMARKS_PROJECTOR_TYPE ===>", projector_type)
 
     if projector_type == 'linear':
         return nn.Linear(config.landmarks_hidden_size, config.hidden_size)
@@ -556,7 +556,7 @@ def build_global_landmark_projector(config, delay_load=False, **kwargs):
 
 def build_landmark_cross_attn(config, delay_load=False, **kwards):
     attn_type = getattr(config, 'cross_attn_type', 'simple')
-    print("ATTENTION_TYPE ===>", attn_type)
+    # print("ATTENTION_TYPE ===>", attn_type)
     if attn_type == "simple":
         return LandmarkGuidedCrossAttention(config.hidden_size)
     elif attn_type == "masked":
