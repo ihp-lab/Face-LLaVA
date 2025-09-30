@@ -1,6 +1,6 @@
 CUDA_VISIBLE_DEVICES=1,2,3,4,5,6,7 HF_DATASETS_OFFLINE=1 TRANSFORMERS_OFFLINE=1 deepspeed --master_port=29501 facellava/train/train_mem.py \
     --deepspeed ./scripts/zero2.json \
-    --model_name_or_path /your/path/to/videollava-weights/ \
+    --model_name_or_path /your/path/to/facellava-7b-pretrain-weights/ \
     --version v1 \
     --data_path /your/path/to/formatted/data/json \
     --image_folder /your/path/to/image/folder \
@@ -11,8 +11,6 @@ CUDA_VISIBLE_DEVICES=1,2,3,4,5,6,7 HF_DATASETS_OFFLINE=1 TRANSFORMERS_OFFLINE=1 
     --landmarks_projector_type landmarks_region_projector \
     --global_landmarks_projector_type linear \
     --cross_attn_type simple \
-    --tune_mm_mlp_adapter False \
-    --tune_landmarks_mlp_adapter True \
     --use_landmark_tokens False \
     --mm_vision_select_layer -2 \
     --mm_use_im_start_end False \
@@ -20,16 +18,16 @@ CUDA_VISIBLE_DEVICES=1,2,3,4,5,6,7 HF_DATASETS_OFFLINE=1 TRANSFORMERS_OFFLINE=1 
     --image_aspect_ratio pad \
     --group_by_modality_length True \
     --bf16 True \
-    --output_dir ./checkpoints/facellava-7b-pretrain \
+    --output_dir ./checkpoints/facellava-7b \
     --num_train_epochs 1 \
-    --per_device_train_batch_size 24 \
+    --per_device_train_batch_size 16 \
     --per_device_eval_batch_size 4 \
     --gradient_accumulation_steps 1 \
     --evaluation_strategy "no" \
     --save_strategy "steps" \
     --save_steps 5000 \
     --save_total_limit 1 \
-    --learning_rate 1e-4 \
+    --learning_rate 2e-5 \
     --weight_decay 0. \
     --warmup_ratio 0.03 \
     --lr_scheduler_type "cosine" \
