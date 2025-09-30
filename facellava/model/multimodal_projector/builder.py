@@ -286,7 +286,7 @@ class LandmarkGuidedCrossAttention(nn.Module):
         self.linear_proj = nn.Linear(hidden_size, hidden_size)
         self.ln = nn.LayerNorm(hidden_size)  # Another LayerNorm if desired
 
-    def forward(self, img_feats, landmark_feats, landmarks=None, branch_scale = 0.001):
+    def forward(self, img_feats, landmark_feats, landmarks=None, branch_scale = 0.1):
         # Handle input with or without time dimension
         if img_feats.ndim == 3:  # Case: images 
             img_feats = img_feats.unsqueeze(1)  # Add a temporal dimension
@@ -439,7 +439,7 @@ class LandmarkGuidedCrossAttentionWMask(nn.Module):
         return mask
 
 
-    def forward(self, img_feats, landmark_feats, landmarks, branch_scale=0.001):
+    def forward(self, img_feats, landmark_feats, landmarks, branch_scale=0.1):
         """
         img_feats: (B, T, N, D)
         landmark_feats: (B, T, 9, D)
