@@ -1,22 +1,26 @@
 <div align="center">
-  <img src="./assets/readme_assets/facellava_logo.png" width="300">
+  <img src="./facellava_logo.png" width="300">
 
   <h1>Facial Expression and Attribute Understanding through Instruction Tuning</h1>
   <h3>WACV 2026</h3>
 
   <p>
     <a href="https://arxiv.org/abs/2504.07198">
-      <img src="https://img.shields.io/badge/arXiv-2504.07198-b31b1b.svg" alt="arXiv">
+      <img src="https://img.shields.io/badge/arXiv-2504.07198-b31b1b.svg?logo=arxiv" alt="arXiv">
+    </a>
+    <a href="https://github.com/ihp-lab/Face-LLaVA">
+      <img src="https://img.shields.io/badge/Github-FaceLLaVA-black?logo=github" alt="GitHub">
     </a>
     <a href="https://huggingface.co/chaubeyG/FaceLLaVA">
-      <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Weights-FaceLLaVA-orange" alt="Model Weights">
+      <img src="https://img.shields.io/badge/Weights-FaceLLaVA-orange?logo=huggingface" alt="Model Weights">
     </a>
     <a href="LICENSE.rst">
-      <img src="https://img.shields.io/badge/license-USC%20Research-green" alt="License">
+      <img src="https://img.shields.io/badge/License-USC%20Research-green" alt="License">
     </a>
     <a href="https://www.python.org/">
-      <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version">
+      <img src="https://img.shields.io/badge/Python-3.10+-blue.svg?logo=python" alt="Python Version">
     </a>
+
   </p>
   <br>
 </div>
