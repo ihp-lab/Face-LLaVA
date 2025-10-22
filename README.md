@@ -1,10 +1,23 @@
-# Face-LLaVA: Facial Expression and Attribute Understanding through Instruction Tuning
+<div align="center">
+  <img src="./assets/readme_assets/facellava_logo.png" width="300">
 
+  <h1>Facial Expression and Attribute Understanding through Instruction Tuning</h1>
 
-[![arXiv](https://img.shields.io/badge/arXiv-2504.07198-b31b1b.svg)](https://arxiv.org/abs/2504.07198)
-[![Model Weights](https://img.shields.io/badge/%F0%9F%A4%97%20Weights-FaceLLaVA-orange)](https://huggingface.co/chaubeyG/FaceLLaVA)
-[![License](https://img.shields.io/badge/license-USC%20Research-green)](LICENSE.rst)
-[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
+  <p>
+    <a href="https://arxiv.org/abs/2504.07198">
+      <img src="https://img.shields.io/badge/arXiv-2504.07198-b31b1b.svg" alt="arXiv">
+    </a>
+    <a href="https://huggingface.co/chaubeyG/FaceLLaVA">
+      <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Weights-FaceLLaVA-orange" alt="Model Weights">
+    </a>
+    <a href="LICENSE.rst">
+      <img src="https://img.shields.io/badge/license-USC%20Research-green" alt="License">
+    </a>
+    <a href="https://www.python.org/">
+      <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version">
+    </a>
+  </p>
+</div>
 
 This is the official codebase of the **WACV 2026 Round 1** Early Accept paper (6.4% acceptance rate) - Face-LLaVA: Facial Expression and Attribute Understanding through Instruction Tuning. 
 
