@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/readme_assets/facellava_logo.png" width="300">
+  <img src="./assets/readme_assets/facellava_logo.png" width="400">
 
   <h1>Facial Expression and Attribute Understanding through Instruction Tuning</h1>
   <h3>WACV 2026</h3>
@@ -138,7 +138,7 @@ The human face plays a central role in social communication, necessitating the u
 
 ## ⚖️ License
 
-This codebase is distributed under the USC Research license. See [LICENSE.rst](LICENSE.rst) for more details.
+This codebase is distributed under the USC Research license. See [LICENSE.rst](LICENSE.rst) for more details. This repo uses parts of code from the [VideoLLaVA](https://github.com/PKU-YuanGroup/Video-LLaVA) repo and we inherit their license for those.
 
 ## 🙌 Credits
 
