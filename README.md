@@ -2,6 +2,7 @@
   <img src="./assets/readme_assets/facellava_logo.png" width="300">
 
   <h1>Facial Expression and Attribute Understanding through Instruction Tuning</h1>
+  <h3>WACV 2026</h3>
 
   <p>
     <a href="https://arxiv.org/abs/2504.07198">
@@ -17,6 +18,7 @@
       <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version">
     </a>
   </p>
+  <br>
 </div>
 
 This is the official codebase of the **WACV 2026 Round 1** Early Accept paper (6.4% acceptance rate) - Face-LLaVA: Facial Expression and Attribute Understanding through Instruction Tuning. 
@@ -25,23 +27,22 @@ This is the official codebase of the **WACV 2026 Round 1** Early Accept paper (6
 
 ## 🧾 Abstract
 
-The human face plays a central role in social communication, necessitating the use of performant computer vision tools for human-centered applications. We propose Face-LLaVA, a multimodal large language model for face-centered, in-context learning, including facial expression and attribute recognition. Additionally, Face-LLaVA is able to generate natural language descriptions that can be used for reasoning. Leveraging existing visual databases, we first developed FaceInstruct-1M, a face-centered database for instruction tuning MLLMs for face processing. We then developed a novel face-specific visual encoder powered by Face-Region Guided Cross-Attention that integrates face geometry with local visual features. We evaluated the proposed method across nine different datasets and five different face processing tasks, including facial expression recognition, action unit detection, facial attribute detection, age estimation and deepfake detection. Face-LLaVA achieves superior results compared to existing open-source MLLMs and competitive performance compared to commercial solutions. Our model output also receives a higher reasoning rating by GPT under a zero-shot setting across all the tasks. Both our dataset and model wil be released at this https URL to support future advancements in social AI and foundational vision-language research.
+The human face plays a central role in social communication, necessitating the use of performant computer vision tools for human-centered applications. We propose Face-LLaVA, a multimodal large language model for face-centered, in-context learning, including facial expression and attribute recognition. Additionally, Face-LLaVA is able to generate natural language descriptions that can be used for reasoning. Leveraging existing visual databases, we first developed FaceInstruct-1M, a face-centered database for instruction tuning MLLMs for face processing. We then developed a novel face-specific visual encoder powered by Face-Region Guided Cross-Attention that integrates face geometry with local visual features. We evaluated the proposed method across nine different datasets and five different face processing tasks, including facial expression recognition, action unit detection, facial attribute detection, age estimation and deepfake detection. Face-LLaVA achieves superior results compared to existing open-source MLLMs and competitive performance compared to commercial solutions. Our model output also receives a higher reasoning rating by GPT under a zero-shot setting across all the tasks. 
 
 ---
 
 ## 📣 News
 
-- [Oct. 2025] Initial release of official codebase and model wirghts. Stay tuned for more details and the dataset.
-- [Sept. 2025] FaceLLaVA accepted in the first round of WACV 2026 (6.4% acceptance rate). See you in Tucson!
+- [Oct. 2025] Initial release of the official codebase and model weights. Stay tuned for more details and the dataset.
+- [Sept. 2025] Face-LLaVA accepted in the first round of WACV 2026 (6.4% acceptance rate). See you in Tucson!
 
 ## 📦 Repository Structure
 
 ```bash
-├── cache_dir/             # will automatically be created to download LanguageBind image and video models from huggingface
-├── checkpoints/           # create a new folder by this name
+├── cache_dir/             # Automatically created to store downloaded LanguageBind models
+├── checkpoints/           # Folder to store model weights
 ├── facellava/             # Main source code
-├── scripts/               # Training scripts for FaceLLaVA
-
+├── scripts/               # Training scripts for Face-LLaVA
 ```
 
 ---
@@ -137,7 +138,7 @@ This codebase is distributed under the USC Research license. See [LICENSE.rst](L
 
 ## 🙌 Credits
 
-This codebase relies on the following existing works - [VideoLLaVA](https://github.com/PKU-YuanGroup/Video-LLaVA), [LLaVA](https://github.com/haotian-liu/LLaVA) and [LLaVA-Next](https://github.com/LLaVA-VL/LLaVA-NeXT). Please check out these repos for their awesome work!
+This codebase builds upon the following excellent works: [VideoLLaVA](https://github.com/PKU-YuanGroup/Video-LLaVA), [LLaVA](https://github.com/haotian-liu/LLaVA) and [LLaVA-Next](https://github.com/LLaVA-VL/LLaVA-NeXT). We gratefully acknowledge their contributions to the open-source community.
 
 ## 🪶 Citation
 
