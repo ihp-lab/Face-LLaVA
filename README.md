@@ -1,8 +1,8 @@
 # Face-LLaVA: Facial Expression and Attribute Understanding through Instruction Tuning
 
 
-[![arXiv](https://img.shields.io/badge/arXiv-2305.00000v1-b31b1b.svg)](https://arxiv.org/abs/2504.07198)
-[![Model Weights](https://img.shields.io/badge/Download%20Weights-USC%20GDrive-green)](https://drive.google.com/file/d/1TAZE70WlqY1rQJIzdJ9x7P7IopyYSlfk/view?usp=sharing)
+[![arXiv](https://img.shields.io/badge/arXiv-2504.07198-b31b1b.svg)](https://arxiv.org/abs/2504.07198)
+[![Model Weights](https://img.shields.io/badge/%F0%9F%A4%97%20Weights-FaceLLaVA-orange)](https://huggingface.co/chaubeyG/FaceLLaVA)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 
 This is the official codebase of the **WACV 2026 Round 1** Early Accept paper (6.4% acceptance rate) - Face-LLaVA: Facial Expression and Attribute Understanding through Instruction Tuning. 
