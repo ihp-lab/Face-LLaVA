@@ -3,6 +3,7 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2504.07198-b31b1b.svg)](https://arxiv.org/abs/2504.07198)
 [![Model Weights](https://img.shields.io/badge/%F0%9F%A4%97%20Weights-FaceLLaVA-orange)](https://huggingface.co/chaubeyG/FaceLLaVA)
+[![License](https://img.shields.io/badge/license-USC%20Research-green)](LICENSE.rst)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 
 This is the official codebase of the **WACV 2026 Round 1** Early Accept paper (6.4% acceptance rate) - Face-LLaVA: Facial Expression and Attribute Understanding through Instruction Tuning. 
@@ -14,6 +15,11 @@ This is the official codebase of the **WACV 2026 Round 1** Early Accept paper (6
 The human face plays a central role in social communication, necessitating the use of performant computer vision tools for human-centered applications. We propose Face-LLaVA, a multimodal large language model for face-centered, in-context learning, including facial expression and attribute recognition. Additionally, Face-LLaVA is able to generate natural language descriptions that can be used for reasoning. Leveraging existing visual databases, we first developed FaceInstruct-1M, a face-centered database for instruction tuning MLLMs for face processing. We then developed a novel face-specific visual encoder powered by Face-Region Guided Cross-Attention that integrates face geometry with local visual features. We evaluated the proposed method across nine different datasets and five different face processing tasks, including facial expression recognition, action unit detection, facial attribute detection, age estimation and deepfake detection. Face-LLaVA achieves superior results compared to existing open-source MLLMs and competitive performance compared to commercial solutions. Our model output also receives a higher reasoning rating by GPT under a zero-shot setting across all the tasks. Both our dataset and model wil be released at this https URL to support future advancements in social AI and foundational vision-language research.
 
 ---
+
+## 📣 News
+
+- [Oct. 2025] Initial release of official codebase and model wirghts. Stay tuned for more details and the dataset.
+- [Sept. 2025] FaceLLaVA accepted in the first round of WACV 2026 (6.4% acceptance rate). See you in Tucson!
 
 ## 📦 Repository Structure
 
@@ -72,14 +78,14 @@ The human face plays a central role in social communication, necessitating the u
 
 ## 🎯 Inference
 
-1. Download the model weights from [here (Use USC Email)](https://drive.google.com/file/d/1TAZE70WlqY1rQJIzdJ9x7P7IopyYSlfk/view?usp=sharing) and unzip them inside a `checkpoints/` folder so that the structure becomes - `./checkpoints/facellava-7b-wolm`.
+1. Download the model weights from [huggingface](https://huggingface.co/chaubeyG/FaceLLaVA) inside `checkpoints/` folder so that the structure becomes - `./checkpoints/FaceLLaVA`.
 
 2. ***Make sure that the input video or image is already face-cropped as the current version does not support automatic cropping.***
 
 3. Run the following command for inference.
 
     ```bash
-    CUDA_VISIBLE_DEVICES=0 python inference.py --model_path="./checkpoints/facellava-7b-wolm" \
+    CUDA_VISIBLE_DEVICES=0 python inference.py --model_path="./checkpoints/FaceLLaVA" \
     --file_path="./assets/demo_inputs/face_attr_example_1.png" --prompt="What are the facial attributes in the given image?"
     ```
 
@@ -95,3 +101,18 @@ The human face plays a central role in social communication, necessitating the u
 - [ ] Inference Code (with Landmarks & Auto Face Cropping)
 - [x] Inference Code (Basic)
 - [x] Model Weights (w/o Landmarks)
+
+## ⚖️ License
+
+This code is distributed under the USC Research license. See [LICENSE.rst](LICENSE.rst) for more details.
+
+## 🪶 Citation
+
+```latex
+@article{chaubey2025face,
+  title={Face-LLaVA: Facial Expression and Attribute Understanding through Instruction Tuning},
+  author={Chaubey, Ashutosh and Guan, Xulang and Soleymani, Mohammad},
+  journal={arXiv preprint arXiv:2504.07198},
+  year={2025}
+}
+```
