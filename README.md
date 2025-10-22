@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./facellava_logo.png" width="300">
+  <img src="./assets/readme_assets/facellava_logo.png" width="300">
 
   <h1>Facial Expression and Attribute Understanding through Instruction Tuning</h1>
   <h3>WACV 2026</h3>
