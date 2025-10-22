@@ -80,7 +80,25 @@ The human face plays a central role in social communication, necessitating the u
 
 1. Download the model weights from [huggingface](https://huggingface.co/chaubeyG/FaceLLaVA) inside `checkpoints/` folder so that the structure becomes - `./checkpoints/FaceLLaVA`.
 
-2. ***Make sure that the input video or image is already face-cropped as the current version does not support automatic cropping.***
+2. Crop the input image/video using `tools/crop_face.py` before further processing. 
+
+    Use the following command to crop an image
+
+    ```python
+    python crop_face.py \
+        --mode image \
+        --image_path "/path/to/input.jpg" \
+        --output_image_path "/path/to/output_cropped.jpg"
+    ```
+
+    Use the following command to crop a video
+    ```python
+    python crop_face.py \
+        --mode video \
+        --video_path "/path/to/input/video.mp4" \
+        --output_video_path "/path/to/output/cropped_video.mp4" \
+        --temp_dir "/path/to/temp"
+    ```
 
 3. Run the following command for inference.
 
@@ -89,18 +107,16 @@ The human face plays a central role in social communication, necessitating the u
     --file_path="./assets/demo_inputs/face_attr_example_1.png" --prompt="What are the facial attributes in the given image?"
     ```
 
-4. Currently the following face perception tasks are supported along with the best modality suited for that task - Emotion(Video), Age(Image), Facial Attributes(Image), Facial Action Units(Image)
+4. **Currently the following face perception tasks are supported along with the best modality suited for that task - Emotion(Video), Age(Image), Facial Attributes(Image), Facial Action Units(Image)**
 
 5. A list of prompts that work well for different tasks is present in `./assets/good_prompts`.
 
 ### ✅ Repository Progress
 
-- [ ] Training Script
-- [ ] Evaluation Metrics
-- [ ] Dataset Release & Preprocessing Code
-- [ ] Inference Code (with Landmarks & Auto Face Cropping)
-- [x] Inference Code (Basic)
-- [x] Model Weights (w/o Landmarks)
+- [ ] Dataset Release
+- [x] Training Script
+- [x] Inference Code
+- [x] Model Weights 
 
 ## ⚖️ License
 
