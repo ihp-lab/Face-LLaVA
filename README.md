@@ -141,7 +141,7 @@ The human face plays a central role in social communication, necessitating the u
 
 ## ⚖️ License
 
-This codebase is distributed under the USC Research license. See [LICENSE.rst](LICENSE.rst) for more details. This repo uses parts of code from the [VideoLLaVA](https://github.com/PKU-YuanGroup/Video-LLaVA) repo and we inherit their license for those.
+This codebase is distributed under the USC Research license. See [LICENSE.rst](LICENSE.rst) for more details. This repo uses parts of code from the [VideoLLaVA](https://github.com/PKU-YuanGroup/Video-LLaVA) repo and our codebase inherit their license for those.
 
 ## 🙌 Credits
 
