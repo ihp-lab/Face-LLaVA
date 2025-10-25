@@ -51,7 +51,7 @@ The human face plays a central role in social communication, necessitating the u
 
 
 <details>
-<summary><h3>😃 Facial Expression Recognition</h3></summary>
+<summary>Facial Expression Recognition</summary>
 
 <div align="center">
   <img src="./assets/result_tables/results_fer.png" width="50%">
@@ -62,7 +62,7 @@ The human face plays a central role in social communication, necessitating the u
 ---
 
 <details>
-<summary><h3>🧓 Facial Attribute and Age Estimation</h3></summary>
+<summary>Facial Attribute and Age Estimation</summary>
 
 <div align="center">
   <img src="./assets/result_tables/results_age_attr.png" width="50%">
