@@ -59,13 +59,20 @@ The human face plays a central role in social communication, necessitating the u
 
 </details>
 
----
-
 <details>
 <summary>Facial Attribute and Age Estimation</summary>
 
 <div align="center">
-  <img src="./assets/result_tables/results_age_attr.png" width="50%">
+  <img src="./assets/result_tables/results_age_attr.png" width="40%">
+</div>
+
+</details>
+
+<details>
+<summary>GPT 4 Evaluation on Reasoning</summary>
+
+<div align="center">
+  <img src="./assets/result_tables/results_reasoning.png" width="70%">
 </div>
 
 </details>
