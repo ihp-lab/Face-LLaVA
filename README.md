@@ -36,12 +36,39 @@ This is the official codebase of the **WACV 2026 Round 1** Early Accept paper (6
 
 The human face plays a central role in social communication, necessitating the use of performant computer vision tools for human-centered applications. We propose Face-LLaVA, a multimodal large language model for face-centered, in-context learning, including facial expression and attribute recognition. Additionally, Face-LLaVA is able to generate natural language descriptions that can be used for reasoning. Leveraging existing visual databases, we first developed FaceInstruct-1M, a face-centered database for instruction tuning MLLMs for face processing. We then developed a novel face-specific visual encoder powered by Face-Region Guided Cross-Attention that integrates face geometry with local visual features. We evaluated the proposed method across nine different datasets and five different face processing tasks, including facial expression recognition, action unit detection, facial attribute detection, age estimation and deepfake detection. Face-LLaVA achieves superior results compared to existing open-source MLLMs and competitive performance compared to commercial solutions. Our model output also receives a higher reasoning rating by GPT under a zero-shot setting across all the tasks. 
 
+<div align="center">
+  <img src="./assets/readme_assets/face_llava_main_figure.png" width="75%">
+</div>
+
 ---
 
 ## 📣 News
 
 - [Oct. 2025] Initial release of the official codebase and model weights. Stay tuned for more details and the dataset.
 - [Sept. 2025] Face-LLaVA accepted in the first round of WACV 2026 (6.4% acceptance rate). See you in Tucson!
+
+## 🏆 Results
+
+
+<details>
+<summary><h3>😃 Facial Expression Recognition</h3></summary>
+
+<div align="center">
+  <img src="./assets/result_tables/results_fer.png" width="50%">
+</div>
+
+</details>
+
+---
+
+<details>
+<summary><h3>🧓 Facial Attribute and Age Estimation</h3></summary>
+
+<div align="center">
+  <img src="./assets/result_tables/results_age_attr.png" width="50%">
+</div>
+
+</details>
 
 ## 📦 Repository Structure
 
