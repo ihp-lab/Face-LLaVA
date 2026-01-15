@@ -17,6 +17,9 @@
     <a href="https://huggingface.co/chaubeyG/FaceLLaVA">
       <img src="https://img.shields.io/badge/Weights-FaceLLaVA-orange?logo=huggingface" alt="Model Weights">
     </a>
+    <a href="https://huggingface.co/datasets/chaubeyG/FaceInstruct1M">
+      <img src="https://img.shields.io/badge/Dataset-FaceInstruct1M-orange?logo=huggingface" alt="Dataset">
+    </a>
     <a href="LICENSE.rst">
       <img src="https://img.shields.io/badge/License-USC%20Research-green?logo=data:image/svg%2bxml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gU3ZnIFZlY3RvciBJY29ucyA6IGh0dHA6Ly93d3cub25saW5ld2ViZm9udHMuY29tL2ljb24gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjU2IDI1NiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjU2IDI1NiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8bWV0YWRhdGE+IFN2ZyBWZWN0b3IgSWNvbnMgOiBodHRwOi8vd3d3Lm9ubGluZXdlYmZvbnRzLmNvbS9pY29uIDwvbWV0YWRhdGE+DQo8Zz4gPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIyOC4zLDIyMi40SDI3LjdjLTkuOCwwLTE3LjctNy45LTE3LjctMTcuN1Y1MS4zYzAtOS44LDcuOS0xNy43LDE3LjctMTcuN2gyMDAuNiBjOS44LDAsMTcuNyw3LjksMTcuNywxNy43djE1My40QzI0NiwyMTQuNSwyMzguMSwyMjIuNCwyMjguMywyMjIuNHogTTI3LjcsNDUuNGMtMy4zLDAtNS45LDIuNi01LjksNS45bDAsMHYxNTMuNCBjMCwzLjMsMi42LDUuOSw1LjksNS45aDIwMC42YzMuMywwLDUuOS0yLjYsNS45LTUuOVY1MS4zYzAtMy4zLTIuNi01LjktNS45LTUuOUgyNy43eiIvPiA8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTIyLjEsODAuOEg1MS4zYy0zLjMsMC01LjktMi42LTUuOS01LjljMC0zLjMsMi42LTUuOSw1LjktNS45aDcwLjhjMy4zLDAsNS45LDIuNiw1LjksNS45IEMxMjgsNzguMiwxMjUuNCw4MC44LDEyMi4xLDgwLjh6IE0xMjIuMSwxMTYuMkg1MS4zYy0zLjMsMC01LjktMi42LTUuOS01LjlzMi42LTUuOSw1LjktNS45aDcwLjhjMy4zLDAsNS45LDIuNiw1LjksNS45IFMxMjUuNCwxMTYuMiwxMjIuMSwxMTYuMnogTTEyMi4xLDEzOS44SDUxLjNjLTMuMywwLTUuOS0yLjYtNS45LTUuOXMyLjYtNS45LDUuOS01LjloNzAuOGMzLjMsMCw1LjksMi42LDUuOSw1LjkgUzEyNS40LDEzOS44LDEyMi4xLDEzOS44eiBNMTIyLjEsMTYzLjRINTEuM2MtMy4zLDAtNS45LTIuNi01LjktNS45czIuNi01LjksNS45LTUuOWg3MC44YzMuMywwLDUuOSwyLjYsNS45LDUuOSBTMTI1LjQsMTYzLjQsMTIyLjEsMTYzLjR6IE0xMTAuMywxODdoLTU5Yy0zLjMsMC01LjktMi42LTUuOS01LjljMC0zLjMsMi42LTUuOSw1LjktNS45aDU5YzMuMywwLDUuOSwyLjYsNS45LDUuOSBDMTE2LjIsMTg0LjQsMTEzLjYsMTg3LDExMC4zLDE4N3ogTTIyMS43LDg3LjJsLTkuNi03TDIwOC41LDY5aC0xMS45bC05LjYtN2wtOS42LDdoLTExLjlsLTMuNywxMS4zbC05LjYsN2wzLjcsMTEuM2wtMy43LDExLjMgbDkuNiw3bDEuNiw0LjhjMCwwLjIsMCwwLjQsMCwwLjZ2NTljMCwzLjMsMi42LDUuOSw1LjksNS45YzEuNiwwLDMuMS0wLjYsNC4yLTEuN2wxMy41LTEzLjVsMTMuNSwxMy41YzEuNywxLjcsNC4yLDIuMiw2LjQsMS4zIGMyLjItMC45LDMuNi0zLjEsMy42LTUuNXYtNTljMC0wLjIsMC0wLjQsMC0wLjZsMS42LTQuOGw5LjYtN2wtMy43LTExLjNMMjIxLjcsODcuMkwyMjEuNyw4Ny4yeiBNMTY2LjEsOTEuN2w1LjgtNC4ybDIuMi02LjhoNy4xIGw1LjgtNC4ybDUuOCw0LjJoNy4xbDIuMiw2LjhsNS44LDQuMmwtMi4yLDYuOGwyLjIsNi44bC01LjgsNC4ybC0yLjIsNi44aC03LjFsLTUuOCw0LjJsLTUuOC00LjJoLTcuMWwtMi4yLTYuOGwtNS44LTQuMmwyLjItNi44IEwxNjYuMSw5MS43eiBNMTkxLjIsMTU5LjJjLTIuMy0yLjMtNi0yLjMtOC4zLDBsLTcuNiw3LjZWMTI4aDIuMmw5LjYsN2w5LjYtN2gyLjJ2MzguOEwxOTEuMiwxNTkuMkwxOTEuMiwxNTkuMnoiLz48L2c+DQo8L3N2Zz4=" alt="License">
     </a>
@@ -44,6 +47,7 @@ The human face plays a central role in social communication, necessitating the u
 
 ## 📣 News
 
+- [Jan. 2026] Released [FaceInstruct-1M](https://huggingface.co/datasets/chaubeyG/FaceInstruct1M) on Huggingface Datasets. Please feel free to use it in your projects!
 - [Oct. 2025] Initial release of the official codebase and model weights. Stay tuned for more details and the dataset.
 - [Sept. 2025] Face-LLaVA accepted in the first round of WACV 2026 (6.4% acceptance rate). See you in Tucson!
 
@@ -168,7 +172,7 @@ The human face plays a central role in social communication, necessitating the u
 
 ### ✅ Repository Progress
 
-- [ ] Dataset Release
+- [x] Dataset Release
 - [x] Training Script
 - [x] Inference Code
 - [x] Model Weights 
@@ -187,7 +191,7 @@ This codebase builds upon the following excellent works: [VideoLLaVA](https://gi
 @article{chaubey2025face,
   title={Face-LLaVA: Facial Expression and Attribute Understanding through Instruction Tuning},
   author={Chaubey, Ashutosh and Guan, Xulang and Soleymani, Mohammad},
-  journal={arXiv preprint arXiv:2504.07198},
+  journal={IEEE/CVF Winter Conference on Applications of Computer Vision 2026},
   year={2025}
 }
 ```
