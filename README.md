@@ -47,6 +47,8 @@ The human face plays a central role in social communication, necessitating the u
 
 ## 📣 News
 
+- [Feb. 2026] Our new work [MoD-DPO](https://mod-dpo.github.io/) on using direct preference optimization to mitigate cross-modal hallucinations in omni LLMs is accepted to CVPR 2026! 🎉 
+- [Jan. 2026] Our new paper [AVERE](https://avere-iclr.github.io/) regarding audiovisual emotion reasoning is accepted to ICLR 2026! 🎉 
 - [Jan. 2026] Released [FaceInstruct-1M](https://huggingface.co/datasets/chaubeyG/FaceInstruct1M) on Huggingface Datasets. Please feel free to use it in your projects!
 - [Oct. 2025] Initial release of the official codebase and model weights. Stay tuned for more details and the dataset.
 - [Sept. 2025] Face-LLaVA accepted in the first round of WACV 2026 (6.4% acceptance rate). See you in Tucson!
@@ -96,7 +98,7 @@ The human face plays a central role in social communication, necessitating the u
 
 1. **Clone the repository**
     ```bash
-    git clone https://github.com/ac-alpha/face-llava.git
+    git clone https://github.com/ihp-lab/Face-LLaVA.git
     cd Face-LLaVA
     ```
 
